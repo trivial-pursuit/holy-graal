@@ -1,0 +1,33 @@
+# JMH version: 1.22
+# VM version: JDK 1.8.0_292, OpenJDK 64-Bit Server VM, 25.292-b10
+# VM invoker: /Users/tognibeni/.sdkman/candidates/java/8.0.292.hs-adpt/jre/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: info.ognibeni.MyBenchmark.topTwenty
+
+# Run progress: 0.00% complete, ETA 00:01:05
+# Fork: 1 of 1
+# Warmup Iteration   1: 17.952 s/op
+# Warmup Iteration   2: 16.459 s/op
+# Warmup Iteration   3: 16.404 s/op
+Iteration   1: 16.405 s/op
+Iteration   2: 16.342 s/op
+Iteration   3: 16.321 s/op
+Iteration   4: 16.435 s/op
+Iteration   5: 16.413 s/op
+
+
+Result "info.ognibeni.MyBenchmark.topTwenty":
+  16.383 ±(99.9%) 0.188 s/op [Average]
+  (min, avg, max) = (16.321, 16.383, 16.435), stdev = 0.049
+  CI (99.9%): [16.195, 16.571] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:02:13
+
+Benchmark              Mode  Cnt   Score   Error  Units
+MyBenchmark.topTwenty  avgt    5  16.383 ± 0.188   s/op

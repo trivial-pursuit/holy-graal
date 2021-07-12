@@ -1,0 +1,33 @@
+# JMH version: 1.22
+# VM version: JDK 11.0.11, Java HotSpot(TM) 64-Bit Server VM, 11.0.11+9-LTS-jvmci-21.1-b05
+# VM invoker: /Library/Java/JavaVirtualMachines/graalvm-ee-java11-21.1.0/Contents/Home/bin/java
+# VM options: -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:-UnlockExperimentalVMOptions -XX:ThreadPriorityPolicy=1
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: info.ognibeni.MyBenchmark.topTwenty
+
+# Run progress: 0,00% complete, ETA 00:01:05
+# Fork: 1 of 1
+# Warmup Iteration   1: 13,385 s/op
+# Warmup Iteration   2: 11,795 s/op
+# Warmup Iteration   3: 13,164 s/op
+Iteration   1: 11,743 s/op
+Iteration   2: 11,725 s/op
+Iteration   3: 11,722 s/op
+Iteration   4: 11,567 s/op
+Iteration   5: 11,954 s/op
+
+
+Result "info.ognibeni.MyBenchmark.topTwenty":
+  11,742 ±(99.9%) 0,532 s/op [Average]
+  (min, avg, max) = (11,567, 11,742, 11,954), stdev = 0,138
+  CI (99.9%): [11,210, 12,274] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:01:38
+
+Benchmark              Mode  Cnt   Score   Error  Units
+MyBenchmark.topTwenty  avgt    5  11,742 ± 0,532   s/op

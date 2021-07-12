@@ -1,0 +1,39 @@
+➜  tognibeni@gemini: ~/workspace/graalvm/holy-graal/hello-world native-image HelloWorld helloWorld
+[helloWorld:11550]    classlist:   2,801.87 ms,  0.96 GB
+[helloWorld:11550]        (cap):   2,473.42 ms,  0.96 GB
+[helloWorld:11550]        setup:   4,937.42 ms,  0.96 GB
+[helloWorld:11550]     (clinit):     204.26 ms,  1.71 GB
+[helloWorld:11550]   (typeflow):   6,379.45 ms,  1.71 GB
+[helloWorld:11550]    (objects):   6,625.63 ms,  1.71 GB
+[helloWorld:11550]   (features):     428.25 ms,  1.71 GB
+[helloWorld:11550]     analysis:  13,969.04 ms,  1.71 GB
+[helloWorld:11550]     universe:     539.74 ms,  1.71 GB
+[helloWorld:11550]      (parse):   1,862.36 ms,  1.71 GB
+[helloWorld:11550]     (inline):   3,209.18 ms,  1.71 GB
+[helloWorld:11550]    (compile):  12,115.88 ms,  2.34 GB
+[helloWorld:11550]      compile:  17,878.85 ms,  2.34 GB
+[helloWorld:11550]        image:   2,010.88 ms,  2.34 GB
+[helloWorld:11550]        write:     382.18 ms,  2.34 GB
+# Printing build artifacts to: helloWorld.build_artifacts.txt
+[helloWorld:11550]      [total]:  42,856.65 ms,  2.34 GB
+
+
+➜  tognibeni@gemini: ~/workspace/graalvm/holy-graal/hello-world ls -l
+total 16712
+-rw-r--r--  1 tognibeni  staff      426  1 Jul 23:59 HelloWorld.class
+-rw-r--r--  1 tognibeni  staff      112  1 Jul 23:56 HelloWorld.java
+-rwxr-xr-x  1 tognibeni  staff  8536084  2 Jul 00:43 helloWorld
+-rw-r--r--  1 tognibeni  staff       25  2 Jul 00:43 helloWorld.build_artifacts.txt
+
+
+➜  tognibeni@gemini: ~/workspace/graalvm/holy-graal/hello-world gtime -p java HelloWorld
+Hello Kitty!
+real 0.14
+user 0.14
+sys 0.03
+
+➜  tognibeni@gemini: ~/workspace/graalvm/holy-graal/hello-world gtime -p ./helloWorld
+Hello Kitty!
+real 0.01
+user 0.00
+sys 0.00

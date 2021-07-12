@@ -1,0 +1,38 @@
+Test Setup
+
+# Testfile: "20xtext.txt", 87MB
+# Warmup: 3 iterations, 5 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+
+Results
+
+# VM version: JDK 1.8.0_231, Java HotSpot(TM) 64-Bit Server VM, 25.231-b11
+Result "info.ognibeni.MyBenchmark.topTen":
+  17.542 ±(99.9%) 3.675 s/op [Average]
+  (min, avg, max) = (16.126, 17.542, 18.463), stdev = 0.954
+  CI (99.9%): [13.867, 21.218] (assumes normal distribution)
+# Run complete. Total time: 00:02:26
+
+# VM version: JDK 13.0.1, OpenJDK 64-Bit Server VM, 13.0.1+9
+Result "info.ognibeni.MyBenchmark.topTen":
+  18,236 ±(99.9%) 7,633 s/op [Average]
+  (min, avg, max) = (16,174, 18,236, 20,670), stdev = 1,982
+  CI (99.9%): [10,604, 25,869] (assumes normal distribution)
+# Run complete. Total time: 00:02:22
+
+# VM version: JDK 1.8.0_232, OpenJDK 64-Bit GraalVM CE 19.2.1, 25.232-b07-jvmci-19.2-b03
+Result "info.ognibeni.MyBenchmark.topTen":
+  13.231 ±(99.9%) 0.300 s/op [Average]
+  (min, avg, max) = (13.159, 13.231, 13.365), stdev = 0.078
+  CI (99.9%): [12.931, 13.531] (assumes normal distribution)
+# Run complete. Total time: 00:01:49
+
+# VM version: JDK 11.0.5, Java HotSpot(TM) 64-Bit Server VM, 11.0.5+10-jvmci-19.3-b05-LTS
+# VM invoker: /Library/Java/JavaVirtualMachines/graalvm-ee-java11-19.3.0/Contents/Home/bin/java
+Result "info.ognibeni.MyBenchmark.topTen":
+  11,606 ±(99.9%) 5,949 s/op [Average]
+  (min, avg, max) = (10,432, 11,606, 14,298), stdev = 1,545
+  CI (99.9%): [5,658, 17,555] (assumes normal distribution)
+# Run complete. Total time: 00:01:33

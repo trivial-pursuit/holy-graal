@@ -1,0 +1,18 @@
+[INFO] [io.quarkus.deployment.pkg.steps.NativeImageBuildStep] Running Quarkus native-image plugin on GraalVM 21.1.0 Java 11 CE (Java Version 11.0.11+8-jvmci-21.1-b05)
+[INFO] [io.quarkus.deployment.pkg.steps.NativeImageBuildRunner] /Users/tognibeni/.sdkman/candidates/java/21.1.0.r11-grl/bin/native-image -J-Djava.util.logging.manager=org.jboss.logmanager.LogManager -J-Dsun.nio.ch.maxUpdateArraySize=100 -J-DCoordinatorEnvironmentBean.transactionStatusManagerEnable=false -J-Dvertx.logger-delegate-factory-class-name=io.quarkus.vertx.core.runtime.VertxLogDelegateFactory -J-Dvertx.disableDnsResolver=true -J-Dio.netty.leakDetection.level=DISABLED -J-Dio.netty.allocator.maxOrder=3 -J-Duser.language=en -J-Duser.country=DE -J-Dfile.encoding=UTF-8 --initialize-at-build-time= -H:InitialCollectionPolicy=com.oracle.svm.core.genscavenge.CollectionPolicy\$BySpaceAndTime -H:+JNI -H:+AllowFoldMethods -jar member-service-1.0.0-SNAPSHOT-runner.jar -H:FallbackThreshold=0 -H:+ReportExceptionStackTraces -H:-AddAllCharsets -H:EnableURLProtocols=http,https -H:-UseServiceLoaderFeature -H:+StackTrace member-service-1.0.0-SNAPSHOT-runner
+[member-service-1.0.0-SNAPSHOT-runner:33443]    classlist:   8.496,12 ms,  1,68 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]        (cap):   3.802,49 ms,  1,68 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]        setup:   6.288,17 ms,  1,68 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]     (clinit):   1.092,79 ms,  5,24 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]   (typeflow):  39.284,65 ms,  5,24 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]    (objects):  54.947,31 ms,  5,24 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]   (features):   1.687,79 ms,  5,24 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]     analysis:  99.669,75 ms,  5,24 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]     universe:   3.527,55 ms,  5,24 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]      (parse):  19.194,08 ms,  5,86 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]     (inline):  18.433,41 ms,  6,85 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]    (compile):  70.388,78 ms,  6,96 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]      compile: 112.510,22 ms,  6,96 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]        image:  10.679,32 ms,  6,96 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]        write:   2.136,67 ms,  6,96 GB
+[member-service-1.0.0-SNAPSHOT-runner:33443]      [total]: 243.810,78 ms,  6,96 GB
